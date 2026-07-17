@@ -114,7 +114,7 @@ class _CanShowFieldBlocBuilderState extends State<CanShowFieldBlocBuilder>
     final animate = shouldAnimateFieldTransitions(context, widget.animate);
     Widget child;
 
-    if (_showOnFirstFrame) {
+    if (_showOnFirstFrame && _canShow) {
       child = widget.builder(context, _canShow);
     } else {
       child = const SizedBox.shrink();
