@@ -1,3 +1,10 @@
+# Unreleased
+
+## Fixed
+
+* **`CanShowFieldBlocBuilder`** — field visibility is now driven only by whether the `FieldBloc` is added to a `FormBloc`; it no longer depends on the show/hide transition finishing. A canceled or muted ticker (slow/low-end devices, reduce-motion, off-screen `TickerMode`) can no longer leave a field permanently hidden, and the show transition animates the field again instead of an empty box. With the animations disabled (`animateWhenCanShow: false` or reduce motion) fields are still shown/hidden instantly, and a field is never rendered before it is added to the form.
+* **`CanShowFieldBlocBuilder`** — while a field animates out, the `builder` now receives `canShow: false` (previously `true` until the transition ended), and `didUpdateWidget` re-syncs the visibility when the `fieldBloc` changes.
+
 # 0.3.0
 
 Flutter **3.44.2** / Dart **3.12** release. Requires **`bloc_form_plus` ^0.3.0**.
