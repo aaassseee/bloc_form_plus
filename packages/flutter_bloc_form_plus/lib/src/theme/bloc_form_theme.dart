@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc_form_plus/src/slider/slider_field_bloc_builder.dart';
 import 'package:flutter_bloc_form_plus/src/theme/field_theme_resolver.dart';
 import 'package:flutter_bloc_form_plus/src/theme/bloc_form_theme_provider.dart';

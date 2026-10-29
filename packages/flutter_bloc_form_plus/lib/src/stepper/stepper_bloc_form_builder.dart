@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' hide Stepper, Step;
+import 'package:material_ui/material_ui.dart' hide Stepper, Step;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_form_plus/src/stepper/stepper.dart';
 import 'package:flutter_bloc_form_plus/src/utils/accessibility.dart';

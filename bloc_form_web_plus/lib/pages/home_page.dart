@@ -1,5 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:bloc_form_web_plus/constants/style.dart';
 import 'package:bloc_form_web_plus/routes.dart';
 import 'package:bloc_form_web_plus/widgets/app_scaffold.dart';

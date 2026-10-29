@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc_form_plus/src/utils/to_string.dart';
 
 class SimpleMaterialStateProperty<T> extends Equatable

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc_form_plus/flutter_bloc_form.dart';
 import 'package:flutter_bloc_form_plus/src/theme/field_theme_resolver.dart';
 

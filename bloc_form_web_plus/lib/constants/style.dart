@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 final colors = <Color>[Color(0xff246bad), Color(0xff2164a4)];
 final colors2 = <Color>[
