@@ -38,17 +38,17 @@ class SubmissionProgressFormBloc extends FormBloc<String, String> {
   void onSubmitting() async {
     debugPrint(username.value);
 
-    final int _currentUploadIndex = _fakeUploads.length;
+    final int currentUploadIndex = _fakeUploads.length;
     _fakeUploads.add(FakeUpload());
     _fakeUploadProgressSubscriptions.add(
-      _fakeUploads[_currentUploadIndex].uploadProgress.listen(
+      _fakeUploads[currentUploadIndex].uploadProgress.listen(
         (progress) {
-          if (!_fakeUploads[_currentUploadIndex].isCancelled) {
+          if (!_fakeUploads[currentUploadIndex].isCancelled) {
             emitSubmitting(progress: progress);
           }
         },
         onDone: () async {
-          if (!_fakeUploads[_currentUploadIndex]._isCancelled) {
+          if (!_fakeUploads[currentUploadIndex]._isCancelled) {
             await Future<void>.delayed(const Duration(milliseconds: 400));
             emitSuccess();
           }
@@ -260,7 +260,11 @@ class LoadingDialog extends StatelessWidget {
         useRootNavigator: false,
         barrierDismissible: false,
         builder: (_) => LoadingDialog(key: key),
-      ).then((_) => FocusScope.of(context).requestFocus(FocusNode()));
+      ).then((_) {
+        if (context.mounted) {
+          FocusScope.of(context).requestFocus(FocusNode());
+        }
+      });
 
   static void hide(BuildContext context) => Navigator.pop(context);
 

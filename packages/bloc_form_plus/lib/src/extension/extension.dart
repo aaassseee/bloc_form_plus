@@ -1,7 +1,7 @@
 extension StreamExtension<T> on Stream<T> {
   Future<T?> firstWhereOrNull(bool Function(T element) test) async {
     try {
-      return firstWhere(test);
+      return await firstWhere(test);
     } catch (_) {
       return null;
     }

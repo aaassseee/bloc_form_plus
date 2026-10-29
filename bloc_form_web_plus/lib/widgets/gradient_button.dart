@@ -25,23 +25,23 @@ class GradientElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _borderRadius = borderRadius ?? BorderRadius.circular(2.0);
+    final resolvedBorderRadius = borderRadius ?? BorderRadius.circular(2.0);
     return Container(
       width: width,
       height: height,
       decoration: BoxDecoration(
         gradient: gradient ?? mainGradient,
-        borderRadius: _borderRadius,
+        borderRadius: resolvedBorderRadius,
       ),
       child: Material(
         elevation: elevation ?? 2.0,
         shape: RoundedRectangleBorder(
-          borderRadius: _borderRadius,
+          borderRadius: resolvedBorderRadius,
         ),
         color: Colors.transparent,
         child: InkWell(
           onTap: onPressed,
-          borderRadius: _borderRadius,
+          borderRadius: resolvedBorderRadius,
           child: Container(
             padding: padding ?? const EdgeInsets.fromLTRB(24, 14, 24, 10),
             child: child,

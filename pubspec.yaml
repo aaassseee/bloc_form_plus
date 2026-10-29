@@ -12,7 +12,7 @@ workspace:
   - packages/flutter_bloc_form_plus/example
 
 dev_dependencies:
-  melos: ^7.1.1
+  melos: ^8.10.0
 
 melos:
   sdkPath: .fvm/flutter_sdk

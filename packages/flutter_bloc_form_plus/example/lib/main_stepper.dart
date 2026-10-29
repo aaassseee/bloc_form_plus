@@ -98,7 +98,7 @@ class WizardForm extends StatefulWidget {
   const WizardForm({super.key});
 
   @override
-  _WizardFormState createState() => _WizardFormState();
+  State<WizardForm> createState() => _WizardFormState();
 }
 
 class _WizardFormState extends State<WizardForm> {
@@ -301,7 +301,11 @@ class LoadingDialog extends StatelessWidget {
     useRootNavigator: false,
     barrierDismissible: false,
     builder: (_) => LoadingDialog(key: key),
-  ).then((_) => FocusScope.of(context).requestFocus(FocusNode()));
+  ).then((_) {
+    if (context.mounted) {
+      FocusScope.of(context).requestFocus(FocusNode());
+    }
+  });
 
   static void hide(BuildContext context) => Navigator.pop(context);
 

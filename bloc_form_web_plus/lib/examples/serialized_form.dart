@@ -141,7 +141,11 @@ class LoadingDialog extends StatelessWidget {
         useRootNavigator: false,
         barrierDismissible: false,
         builder: (_) => LoadingDialog(key: key),
-      ).then((_) => FocusScope.of(context).requestFocus(FocusNode()));
+      ).then((_) {
+        if (context.mounted) {
+          FocusScope.of(context).requestFocus(FocusNode());
+        }
+      });
 
   static void hide(BuildContext context) => Navigator.pop(context);
 

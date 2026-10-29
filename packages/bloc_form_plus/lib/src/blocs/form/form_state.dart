@@ -654,7 +654,7 @@ class FormBlocLoading<SuccessResponse, FailureResponse>
 /// [FormBlocState.toLoadFailed].
 class FormBlocLoadFailed<SuccessResponse, FailureResponse>
     extends FormBlocState<SuccessResponse, FailureResponse>
-    with EquatableMixin {
+    with Equatable {
   final FailureResponse? failureResponse;
 
   bool get hasFailureResponse => failureResponse != null;
@@ -717,7 +717,7 @@ class FormBlocLoaded<SuccessResponse, FailureResponse>
 /// [FormBlocState.toSubmitting].
 class FormBlocSubmitting<SuccessResponse, FailureResponse>
     extends FormBlocState<SuccessResponse, FailureResponse>
-    with EquatableMixin {
+    with Equatable {
   final bool isCanceling;
   final double progress;
 
@@ -763,7 +763,7 @@ class FormBlocSubmitting<SuccessResponse, FailureResponse>
 /// [FormBlocState.toSuccess].
 class FormBlocSuccess<SuccessResponse, FailureResponse>
     extends FormBlocState<SuccessResponse, FailureResponse>
-    with EquatableMixin {
+    with Equatable {
   final SuccessResponse? successResponse;
   final bool canSubmitAgain;
   final int stepCompleted;
@@ -809,7 +809,7 @@ class FormBlocSuccess<SuccessResponse, FailureResponse>
 /// [FormBlocState.toFailure].
 class FormBlocFailure<SuccessResponse, FailureResponse>
     extends FormBlocState<SuccessResponse, FailureResponse>
-    with EquatableMixin {
+    with Equatable {
   final FailureResponse? failureResponse;
 
   bool get hasFailureResponse => failureResponse != null;
@@ -927,7 +927,7 @@ class FormBlocDeleting<SuccessResponse, FailureResponse>
 /// [FormBlocState.toFailure].
 class FormBlocDeleteFailed<SuccessResponse, FailureResponse>
     extends FormBlocState<SuccessResponse, FailureResponse>
-    with EquatableMixin {
+    with Equatable {
   final FailureResponse? failureResponse;
 
   bool get hasFailureResponse => failureResponse != null;
@@ -966,7 +966,7 @@ class FormBlocDeleteFailed<SuccessResponse, FailureResponse>
 /// [FormBlocState.toSuccess].
 class FormBlocDeleteSuccessful<SuccessResponse, FailureResponse>
     extends FormBlocState<SuccessResponse, FailureResponse>
-    with EquatableMixin {
+    with Equatable {
   final SuccessResponse? successResponse;
 
   bool get hasSuccessResponse => successResponse != null;
@@ -1005,7 +1005,7 @@ class FormBlocDeleteSuccessful<SuccessResponse, FailureResponse>
 /// [FormBlocState.toUpdatingFields].
 class FormBlocUpdatingFields<SuccessResponse, FailureResponse>
     extends FormBlocState<SuccessResponse, FailureResponse>
-    with EquatableMixin {
+    with Equatable {
   final double progress;
 
   FormBlocUpdatingFields({

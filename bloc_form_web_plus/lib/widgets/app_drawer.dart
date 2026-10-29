@@ -264,7 +264,7 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
     );
   }
 
-  _launchGitHubURL() async {
+  Future<void> _launchGitHubURL() async {
     const urlPath = 'https://github.com/dukanitech/bloc_form';
     final Uri url = Uri.parse(urlPath);
     if (await canLaunchUrl(url)) {
